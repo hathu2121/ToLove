@@ -27,11 +27,17 @@
   position: relative;
   width: 60px;
   height: 60px;
-  font-size: 30px;
+  font-size: 50px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.main header .header-nav.active {
+  background: url(../assets/pic/close.png.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
 }
 .main__title {
   position: relative;
@@ -63,6 +69,29 @@
 }
 .main__title #title-main3:hover {
   letter-spacing: 6px;
+}
+.main__profile {
+  font-size: 60px;
+  list-style: none;
+  position: absolute;
+  bottom: 20px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__profile #profile-main {
+  color: #FBE3B9;
+  filter: invert(1);
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+.main__profile #profile-main:hover {
+  transform: scale(0.5) translate(-15px);
+}
+
+.main.avtive {
+  right: 300px;
 }
 
 .main header {
@@ -98,7 +127,29 @@
 }
 
 .sidebar {
-  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar ul {
+  position: relative;
+  list-style: none;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #111;
+}
+
+.sidebar ul li a:hover {
+  color: #FBE3B9;
 }
 
 /*# sourceMappingURL=style.css.map */

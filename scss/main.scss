@@ -10,6 +10,7 @@
     background: #111;
     color: #ffffff;
     z-index: 2;
+
     header{
         .header-logo{
             text-transform: uppercase;
@@ -21,11 +22,18 @@
             position: relative;
             width: 60px;
             height: 60px;
-            font-size: 30px;
+            font-size: 50px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+        .header-nav.active{
+            background: url(../assets/pic/close.png.png );
+            background-repeat: no-repeat;
+            background-size: 30px;
+            background-position: center;
+        
         }
     }
     &__title{
@@ -60,7 +68,30 @@
             }
         }
     }
+    &__profile{
+        font-size: 60px;
+        list-style: none;
+        position: absolute;
+        bottom: 20px;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       #profile-main{
+           color: $button-color-hover;
+        filter: invert(1);
+        transform: scale(0.5);
+        transition: 0.5s;
+        &:hover{
+        transform: scale(0.5) translate(-15px);            
+        }
+       }
+    }
 }
+.main.avtive{
+    right: 300px;
+}
+
 .main header {
     position: absolute;
         top: 0;
@@ -92,5 +123,24 @@
 }
 
 .sidebar{
-    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sidebar ul {
+    position: relative;
+    list-style: none;
+}
+.sidebar ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #111;
+}
+.sidebar ul li a:hover{
+    color: $button-color-hover;
 }
